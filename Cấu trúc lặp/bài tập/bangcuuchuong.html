@@ -3,20 +3,21 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title><Page Title></title>
+    <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <body>
-    <script language="javascript">
+    <script >
+    
         let a,b,c;
         a="<table border='1' width='300' cellspacing='0' cellpadding='3'>";
-        c=b=1;
-        for(b=1;b<=10;b++){
+        b=1;c=2;
+        for(b=1;b<10;b++){
             a+='<tr>';
-            for(c=1;c<=10;c++){
-                a+='<td>'+b*c+'</td>';
+            for(c=2;c<10;c++){
+                a+='<td>'+c+"x"+b+"="+(b*c)+'</td>';
             }
             a+='</tr>';
             c=1;
@@ -25,5 +26,7 @@
         c+='<tabler>';
         document.write(a);
                 </script>
+        
+    </script>
 </body>
 </html>

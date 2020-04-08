@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div style="margin-left: 45%;">
+        <h2>Luyện tập vòng lặp</h2><br><br>
+        <button style="margin-left: 80px;" onclick="bai1()">bai1</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai2()">bai2</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai3()">bai3</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai4()">bai4</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai5()">bai5</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai6()">bai6</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai7()">bai7</button><br><br>
+        <button style="margin-left: 80px;" onclick="bai8()">bai8</button><br><br>
+    </div>
+    
+    <script>
+        function bai1(){
+            for(var i=1;i<=100;i++){
+            if(i===99){
+                document.write("hoàn thành vòng lặp");
+                break;
+            }
+            document.write(i+'<br>');
+            
+        }
+        }
+        function bai2(){
+            let a=parseInt(prompt("Nhập nhiệt độ hiện nay: "))
+        if(a>100){
+            alert('vui lòng giảm nhiệt độ')
+        }else if(a<20){
+            alert('vui lòng tăng nhiệt độ')
+
+        } 
+        }
+        function bai3(){
+        let i;
+        let fib = []; 
+
+        fib[0] = 0;
+        fib[1] = 1;
+        for (i = 2; i < 22; i++) {
+        fib[i] = fib[i - 2] + fib[i - 1];
+           document.write(fib[i]+"  ");
+        }
+        }
+        function bai4(){
+        let i;
+        let fib = []; 
+
+        fib[0] = 0;
+        fib[1] = 1;
+        for (i = 2; i < 22; i++) {
+        fib[i] = fib[i - 2] + fib[i - 1];
+           if(fib[i]%5==0){
+            document.write("số đầu tiên trong dãy fibonacci chia hết cho 5 là: "+fib[i])
+               break;
+               
+        }
+        }}
+        function bai5(){
+            let a;
+            let b = []; 
+            var total=0;
+        b[0] = 0;
+        b[1] = 1;
+        for (a = 2; a <= 21; a++) {
+            b[a] = b[a - 2] + b[a - 1];
+            total+=b[a];
+        }
+        document.write("tổng của 20 số đầu tiên trong dãy fibonacci là: "+total);
+        }
+        
+        function bai6(){
+            let i=7;
+            let total=0;
+            while(i%7==0){
+                i+=7;
+                total+=i;
+                if(i>210){
+                  document.write("tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên: "+total)
+                    break;
+                }
+            }
+        }
+        function bai7(){
+            for(var i=1;i<=100;i++){
+            if(i%3==0&&i%5!=0){
+                document.write("Fizz"+"<br>");
+                continue;
+            }else if(i%5==0&&i%3!=0){
+                document.write("Buzz"+"<br>");
+                continue;
+            }
+            else if(i%5==0&&i%3==0){
+                document.write("FizzBuzz"+"<br>");
+                continue;
+            }
+            document.write(i+'<br>');
+        }
+        }
+        function bai8(){
+            
+        }
+        
+        
+    </script>
+</body>
+</html>
