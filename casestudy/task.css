@@ -1,0 +1,13 @@
+body{
+    /* background-image: url(image/15-bai-bien-dep-nhat-the-gioi-nam-2019-theo-binh-chon-cua-trang-web-du-lich-danh-tieng-trip-advisordocx-1551318167267.jpeg); */
+background-color: bisque;   
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+p{
+    color:black;
+}

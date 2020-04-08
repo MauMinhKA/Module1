@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xeploaihs</title>
+</head>
+<body>
+<form>
+    <p> nhập điểm của bạn: </p><input style="margin-bottom: 10px" type="number" id="diem" />
+    <br> <input type="button" value="xeploai" onclick="xeploai()" />
+
+
+</form>
+<script type="text/javascript">
+    function xeploai() {
+            var diem = parseInt(document.getElementById("diem").value);
+        if(75<=diem){
+           alert("bạn xếp loại A");
+        }else if (60<=diem){
+            alert("bạn xếp loại B");
+        }else if (45<=diem){
+            alert("bạn xếp loại C");
+        }else if (35<=diem){
+            alert("bạn xếp loại B");
+        }else {
+            alert("bạn ngu như con bò");
+        }
+
+    }
+</script>
+</body>
+</html>

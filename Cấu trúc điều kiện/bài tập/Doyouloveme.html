@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<h1 style="position:absolute; left:650px;top:175px;color: red">Do you love me ?</h1>
+<input style=" position:absolute;left:700px;top:245px;" id="y" type = "button" value = " Yes " onclick="yesClick()" >
+<input style="position:absolute;left:780px;top:245px;" id="n" type="button" value= " No " onmouseover="noHover()">
+
+<script>
+    function yesClick()
+    {
+        alert("❤❤❤❤❤❤❤ ");
+    }
+    function noHover()
+    {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('n').style.left = x + 'px';
+        document.getElementById('n').style.top = y + 'px';
+    }
+</script>
+</body>
+</html>

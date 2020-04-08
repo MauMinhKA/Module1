@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        <Page Title>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h2>Bai1</h2>
+    <p id="demo"></p>
+    <script>
+        let text = "";
+        let i;
+        for (i = 0; i < 5; i++) {
+            text += " the number is " + i + " </br>";
+        }
+        document.getElementById('demo').innerHTML = text;
+
+    </script>
+
+    <h2>bai2</h2>
+    <input id='demo1' type="number">
+    <button onclick="tinhtong()">total</button><br>
+    <p id="txt"></p>
+    <script>
+        function tinhtong() {
+            let total = 0;
+            let a = parseInt(document.getElementById('demo1').value);
+            for (let i = 1; i <= a; i++) {
+                total += i;
+            }
+            document.getElementById('txt').innerHTML="total = "+total;
+        }
+
+    </script>
+</body>
+
+</html>

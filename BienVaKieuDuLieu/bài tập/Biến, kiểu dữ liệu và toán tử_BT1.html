@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+
+<form>
+   <p> nhập điểm toán</p><input style="margin-bottom: 10px" type="number" id="diemToan" name="diemToan" /><br>
+    <p> nhập điểm lý</p> <input style="margin-bottom: 10px" type="number" id="diemLy" name="diemLy" /><br>
+    <p> nhập điểm hóa</p><input style="margin-bottom: 10px" type="number" id="diemHoa" name="diemHoa" />
+    <br> <input type="button" value="tinhdiemTB" onclick="diemTb()" />
+
+
+</form>
+<script type="text/javascript">
+    function diemTb() {
+        var toan = parseInt(document.getElementById("diemToan").value);
+        var ly = parseInt(document.getElementById("diemLy").value);
+        var hoa = parseInt(document.getElementById("diemHoa").value);
+        var tb=(toan+ly+hoa)/3;
+        document.write("điểm trung bình của bạn là : "+tb);
+    }
+</script>
+</body>
+</html>

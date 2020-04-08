@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+
+<form>
+   <p> mời bạn nhập: </p><input style="margin-bottom: 10px" type="number" id="doC"  /><br>
+    <br> <input type="button"  value="chuyendoi" onclick="chuyenDoi()" />
+
+
+</form>
+<script type="text/javascript">
+    function chuyenDoi() {
+        let doC = document.getElementById("doC").value;
+        let doF=((9*doC)/5)+32;
+        document.write(doF);
+    }
+</script>
+</body>
+</html>

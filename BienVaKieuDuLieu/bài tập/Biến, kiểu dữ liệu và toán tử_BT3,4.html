@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body>
+
+<form>
+   <p> mời bạn nhập bán kính : </p><input style="margin-bottom: 10px" type="number" id="banKinh"  /><br>
+    <br> <input type="button"  value="OK" onclick="tinhdtcv()" />
+
+
+</form>
+<script type="text/javascript">
+    function tinhdtcv() {
+        const Pi=3.14;
+        let bankinh = document.getElementById("banKinh").value;
+        let Chuvi=bankinh*Pi;
+        let Dientich=bankinh*Pi*Pi;
+        document.write("diện tích hình tròn là : "+Dientich+"</br>");
+        document.write("chu vi hình tròn là : "+ Chuvi);
+    }
+</script>
+</body>
+</html>

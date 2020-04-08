@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swich_Case</title>
+</head>
+<body>
+
+<p>input Month: <input type="number" id="month"><button onclick="tinh();">Tính</button></p>
+<p id="outPut"></p>
+
+<script>
+    let month01= document.getElementById("month");
+    let result;
+    let soNgay;
+    function tinh() {
+        result= parseInt(month01.value);
+        switch (result) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                soNgay=31;
+                break;
+            case 2:
+                soNgay=28;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                soNgay=30;
+                break;
+        }
+        document.getElementById("outPut").innerHTML= "Tháng "+result+ " có "+soNgay+" ngày";
+
+    }
+</script>
+</body>
+</html>

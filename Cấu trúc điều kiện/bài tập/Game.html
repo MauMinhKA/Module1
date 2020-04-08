@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div id="container" style="width: 50%; background-color: black;margin-left: 25%">
+    <div style="margin-left: 85px">
+        <img onclick="chuyenHinh(1)" id="img1" src="./img/a1.jpg" alt="" style="height: 135px;width: 600px"><br>
+        <img onclick="chuyenHinh(2)" id="img2" src="./img/c2.jpg" alt="" style="height: 135px;width: 600px"><br>
+        <img onclick="chuyenHinh(3)" id="img3" src="./img/b3.jpg" alt="" style="height: 135px;width: 600px"><br>
+        <img onclick="chuyenHinh(4)" id="img4" src="./img/c4.jpg" alt="" style="height: 135px;width: 600px"><br>
+        <img onclick="chuyenHinh(5)" id="img5" src="./img/b5.jpg" alt="" style="height: 135px;width: 600px">
+    </div>
+
+</div>
+<script>
+    let hinh1= document.getElementById('img1');
+    let hinh2= document.getElementById('img2');
+    let hinh3= document.getElementById('img3');
+    let hinh4= document.getElementById('img4');
+    let hinh5= document.getElementById('img5');
+    function chuyenHinh(number) {
+        switch (number) {
+            case 1:
+                if (hinh1.getAttribute('src') === './img/a1.jpg') {
+                    hinh1.src = "./img/b1.jpg"
+                } else if (hinh1.getAttribute('src') === "./img/b1.jpg") {
+                    hinh1.src = "./img/c1.jpg"
+                } else if (hinh1.getAttribute('src') === "./img/c1.jpg") {
+                    hinh1.src = "./img/a1.jpg"
+                }
+                break;
+            case 2:
+                if (hinh2.getAttribute('src') === './img/a2.jpg') {
+                    hinh2.src = "./img/b2.jpg"
+                } else if (hinh2.getAttribute('src') === "./img/b2.jpg") {
+                    hinh2.src = "./img/c2.jpg"
+                } else if (hinh2.getAttribute('src') === "./img/c2.jpg") {
+                    hinh2.src = "./img/a2.jpg"
+                }
+                break;
+            case 3:
+                if (hinh3.getAttribute('src') === './img/a3.jpg') {
+                    hinh3.src = "./img/b3.jpg"
+                } else if (hinh3.getAttribute('src') === "./img/b3.jpg") {
+                    hinh3.src = "./img/c3.jpg"
+                } else if (hinh3.getAttribute('src') === "./img/c3.jpg") {
+                    hinh3.src = "./img/a3.jpg"
+                }
+                break;
+            case 4:
+                if (hinh4.getAttribute('src') === './img/a4.jpg') {
+                    hinh4.src = "./img/b4.jpg"
+                } else if (hinh4.getAttribute('src') === "./img/b4.jpg") {
+                    hinh4.src = "./img/c4.jpg"
+                } else if (hinh4.getAttribute('src') === "./img/c4.jpg") {
+                    hinh4.src = "./img/a4.jpg"
+                }
+                break;
+            case 5:
+                if (hinh5.getAttribute('src') === './img/a5.jpg') {
+                    hinh5.src = "./img/b5.jpg"
+                } else if (hinh5.getAttribute('src') === "./img/b5.jpg") {
+                    hinh5.src = "./img/c5.jpg"
+                } else if (hinh5.getAttribute('src') === "./img/c5.jpg") {
+                    hinh5.src = "./img/a5.jpg"
+                }
+                break;
+        }
+
+           if (hinh1.getAttribute('src')==='./img/a1.jpg'&&hinh2.getAttribute('src')==='./img/a2.jpg'&&hinh3.getAttribute('src')==='./img/a3.jpg'
+           &&hinh4.getAttribute('src')==='./img/a4.jpg'&&hinh5.getAttribute('src')==='./img/a5.jpg'){
+               container.style.background="red"
+               }
+
+           else if (hinh1.getAttribute('src')==='./img/b1.jpg'&&hinh2.getAttribute('src')==='./img/b2.jpg'&&hinh3.getAttribute('src')==='./img/b3.jpg'
+            &&hinh4.getAttribute('src')==='./img/b4.jpg'&&hinh5.getAttribute('src')==='./img/b5.jpg'){
+               container.style.background="red"
+        }
+           else if (hinh1.getAttribute('src')==='./img/c1.jpg'&&hinh2.getAttribute('src')==='./img/c2.jpg'&&hinh3.getAttribute('src')==='./img/c3.jpg'
+               &&hinh4.getAttribute('src')==='./img/c4.jpg'&&hinh5.getAttribute('src')==='./img/c5.jpg'){
+               container.style.background="red"
+           }
+    }
+
+</script>
+
+
+</body>
+</html>

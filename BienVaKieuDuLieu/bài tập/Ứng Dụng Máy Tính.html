@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+​
+<body>
+<p>nhập số a : <input type="text" id="number1"></p>
+<p>nhập số b : <input type="text" id="number2"></p>
+<p>kết quả : <input type="text" id="kq"></p>
+<br>
+<button onclick="tinhToan('add');">Cộng</button>
+<button onclick="tinhToan('sub');">Trừ</button>
+<button onclick="tinhToan('mut');">Nhân</button>
+<button onclick="tinhToan('div');">Chia</button>
+<script>
+    let number1 = document.getElementById("number1");
+    let number2 = document.getElementById("number2");
+    let result;
+    function tinhToan(operator) {
+        if (operator === 'add') {
+            result = parseInt(number1.value) + parseInt(number2.value);
+            document.getElementById("kq").value=result;
+        } else if(operator==="sub") {
+            result = parseInt(number1.value) - parseInt(number2.value);
+            document.getElementById("kq").value=result;
+        }else if(operator==="mut") {
+            result = parseInt(number1.value) * parseInt(number2.value);
+            document.getElementById("kq").value=result;}
+        else {
+            result = parseInt(number1.value) / parseInt(number2.value);
+            document.getElementById("kq").value=result;
+    }}
+</script>
+</body>
+​
+
