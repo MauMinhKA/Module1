@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        let A_array = [];
+        let data = " ";
+        for (let i = 0; i < 5; i++) {
+            A_array[i] = new Array(1, 1, 1, 1, 1);
+        }
+        function display() {
+            data = '';
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += A_array[i][j] + "&emsp;";
+                }
+            }
+            document.body.innerHTML = ' ';
+            document.write(data);
+        }
+        display();
+
+        let check = false;
+        function changeValue() {
+            let positionX = parseInt(prompt("X: "));
+            let positionY = parseInt(prompt("Y: "));
+            data = '';
+            if (check) {
+                A_array[positionX][positionY] = "X";
+                check = false;
+            } else {
+                A_array[positionX][positionY] = "Y";
+                check = true;
+            }
+            display();
+        }
+    </script>
+    <p><br></p>
+    <button onclick="changeValue()">changeValue</button>
+
+</body>
+
+</html>

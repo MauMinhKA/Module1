@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bebc599-f953-49f7-bdbb-8835d3b82d76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/Luyentapvonglap.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/Luyentapvonglap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +79,7 @@
       <workItem from="1586308953069" duration="7011000" />
       <workItem from="1586339890357" duration="9000" />
       <workItem from="1586488037027" duration="267000" />
+      <workItem from="1586536727457" duration="8000" />
     </task>
     <servers />
   </component>
