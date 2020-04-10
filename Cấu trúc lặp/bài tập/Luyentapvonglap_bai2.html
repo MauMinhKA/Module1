@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+
+</body>
+<div style="margin-left: 45%;">
+    <h2>Luyện tập vòng lặp</h2><br><br>
+    <button style="margin-left: 80px;" onclick="bai1()">bai1</button><br><br>
+    <button style="margin-left: 80px;" onclick="bai2()">bai2</button><br><br>
+    <button style="margin-left: 80px;" onclick="bai3()">bai3</button><br><br>
+    <button style="margin-left: 80px;" onclick="bai4()">bai4</button><br><br>
+    <button style="margin-left: 80px;" onclick="bai5()">bai5</button><br><br>
+    <button style="margin-left: 80px;" onclick="bai6()">bai6</button><br><br>
+
+</div>
+<script>
+    function bai1() {
+        var a = parseInt(prompt('nhập số phần tử muốn in ra: '))
+        let i;
+        let fib = [];
+        a += 2;
+        fib[0] = 0;
+        fib[1] = 1;
+        for (i = 2; i < a; i++) {
+            fib[i] = fib[i - 2] + fib[i - 1];
+            document.write(fib[i] + "  ");
+        }
+    }
+    function bai2() {
+        var num = parseInt(prompt('nhập số cần in ra GT: '));
+        var result = num;
+        if (num === 0 || num === 1) {
+            return 1;
+        }
+        while (num > 1) {
+            num--;
+            result *= num;
+        }
+        alert(result);
+    }
+    function bai3() {
+        for (var a = 1; a <= 5; a++) {
+            for (b = 1; b <= a; b++) {
+                document.write('*')
+            } document.write('<br>')
+        }
+        document.write('<br><br>')
+
+        for (var a = 5; 1 <= a; a--) {
+            for (b = a; 1 <= b; b--) {
+                document.write('*')
+            } document.write('<br>')
+        } document.write('<br><br>')
+
+        document.write('<br><br>')
+        for (var a = 5; 1 <= a; a--) {
+            for (var c = (a - 1); 1 <= c; c--) {
+                document.write('&nbsp&nbsp')
+            }
+            for (b = 5; a <= b; b--) {
+                document.write('*')
+            } document.write('<br>')
+        } document.write('<br><br>')
+
+
+        for (var a = 1; a <= 5; a++) {
+            for (b = 1; b < a; b++) {
+                document.write('&nbsp&nbsp')
+            }
+            for (c = 5; a <= c; c--) {
+                document.write('*')
+            } document.write('<br>')
+
+
+        }
+    }
+    function bai4() {
+        for (i = 1; i <= 22; i++) {
+            document.write('*')
+        } document.write('<br>')
+        for (a = 1; a <= 5; a++) {
+            for (i = 1; i <= 22; i++) {
+                if (i == 1 || i == 22) {
+                    document.write('*')
+                } else {
+                    document.write('&nbsp&nbsp')
+                }
+
+            } document.write('<br>')
+
+        }
+        for (i = 1; i <= 22; i++) {
+            document.write('*')
+        }
+    }
+    function bai5() {
+
+        let money = parseInt(prompt('nhập số tiền muốn vay: '))
+        let month = parseInt(prompt('nhập số tháng muốn trả (2%/tháng): '))
+
+        for (i = 1; i <= month; i++) {
+            money = money + (money * 0.02)
+        } alert('số tiền phải trả là: ' + money)
+    }
+    function bai6() {
+        for (i = 1; i <= 13; i++) {
+            if (i == 3 || i == 4 || i == 5 || i == 11 || i == 10 || i == 9) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 2 || i == 6 || i == 8 || i == 12) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 2; i++) {
+            for (i = 1; i <= 13; i++) {
+                if (i == 1 || i == 13||i==7) {
+                    document.write('*')
+                } else {
+                    document.write("&nbsp&nbsp")
+                }
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 2 || i == 12) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 3 || i == 11) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 4 || i == 10) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 5 || i == 9) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 6 || i == 8) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+        for (i = 1; i <= 13; i++) {
+            if (i == 7 ) {
+                document.write('*')
+            } else {
+                document.write("&nbsp&nbsp")
+            }
+        } document.write('<br>')
+    }
+</script>
+</body>
+
+</html>

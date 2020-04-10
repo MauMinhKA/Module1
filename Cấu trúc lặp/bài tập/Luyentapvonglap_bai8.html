@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+  <input type="button" value="Play!" onclick="play()" id="btn1">
+    <input type="button" id="btn2" style="display:none" 
+    value="Play again!" onclick="play()">
+    
+ <script>
+   
+    function play() {
+            
+            let min = parseInt(prompt("nhập số đầu trong khoảng mong muốn",""));
+            let max = parseInt(prompt("nhập số cuối trong khoảng mong muốnx",""));
+            let ranDom = Math.floor(Math.random()*(max-min+1)+min);
+            for(var a=0;a<=2;a++){
+                let num = parseInt(prompt("nhập số mà bạn cho là đúng :",""));
+                if (ranDom === num) {
+                    alert("bạn đoán đúng")
+                    btn1.style.display = 'none';
+                    btn2.style.display = 'block';
+                    break;
+                }else if(num>max||num<min){
+                  alert('nhập số trong khoảng yêu cầu')
+                } 
+                else {
+                    if  (num > ranDom) {
+                        alert(' nhỏ hơn')
+                    } 
+                    else {alert('lớn hơn')
+                    }
+                } if(a==2){
+                      alert('bạn thua')
+                }
+              }
+       
+    }
+
+</script>
+</body>
+</html>
