@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div style="margin-left: 45%;">
+        <button style="margin-top: 50px;" onclick="bai1()">bài 1</button><br>
+        <button style="margin-top: 50px;" onclick="bai2()">bài 2</button><br>
+        <button style="margin-top: 50px;" onclick="bai3()">bài 3</button><br>
+        <!-- <button style="margin-top: 50px;" onclick="bai4()">bài 4</button><br> -->
+    </div>
+    <script>
+        function bai1() {
+            var myColor = ["Red", "Green", "White", "Black"];
+            alert(myColor.join(', '));
+        }
+        function bai2() {
+
+            var array_1 = [];
+            for (var i = 0; i <= 6; i++) {
+                array_1[i] = prompt('nhap phan tu mang')
+                if (array_1[i] % 2 == 0) {
+                    array_1[i] = '-' + array_1[i];
+                }
+            } document.write(array_1.join(''))
+        }
+        function bai3() {
+            var txt = prompt('nhap chuoi: ');
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var array_2 = [];
+
+        for (var x = 0; x < txt.length; x++) {
+            if (UPPER.indexOf(txt[x]) !== -1) {
+                array_2.push(txt[x].toLowerCase());
+            }
+            else if (LOWER.indexOf(txt[x]) !== -1) {
+                array_2.push(txt[x].toUpperCase());
+            }
+            else {
+                array_2.push(txt[x]);
+            }
+        }
+        alert(array_2.join(''));
+        }
+        
+
+    </script>
+</body>
+
+</html>
