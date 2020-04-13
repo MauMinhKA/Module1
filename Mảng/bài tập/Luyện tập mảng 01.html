@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luyện tập mảng 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div style="margin-left: 45%;">
+        <button onclick="bai1()"> bài 1</button><br><br>
+        <button onclick="bai2()"> bài 2</button><br><br>
+        <button onclick="bai3()"> bài 3</button><br><br>
+        <button onclick="bai4()"> bài 4</button><br><br>
+        <button onclick="bai5()"> bài 5</button><br><br>
+        <button onclick="bai6()"> bài 6</button><br><br>
+        <button onclick="bai7()"> bài 7</button><br><br>
+        <button onclick="bai8()"> bài 8</button><br><br>
+        <button onclick="bai9()"> bài 9</button>
+    </div>
+    <script>
+        function bai1() {
+            let a = [];
+            let b = 0;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+                if (10 <= a[i]) {
+                    b += 1;
+                }
+            }
+            alert(' trong chuỗi có ' + b + ' phần tử lớn hơn hặc bằng 10')
+        }
+        function bai2() {
+            let a = [1, 2, 3, 11, 4, 5, 6, 8, 7, 44]
+            var max = a[0];
+            vitri = 0;
+            for (let i = 1; i < 10; i++) {
+                if (max < a[i]) {
+                    max = a[i];
+                    vitri = i;
+                }
+            } alert(' phần tử lơn nhất trong chuỗi là ' + max + " nằm ở vị trí thứ " + vitri)
+
+        }
+        function bai3() {
+            let a = [1, 2, 3, 11, 4, 5, 6, 8, 7, 44]
+            let max = a[0];
+            vitri = 0;
+            for (let i = 1; i < 10; i++) {
+                if (max < a[i]) {
+                    max = a[i];
+                }
+                vitri += a[i];
+            } alert(' phần tử lơn nhất trong chuỗi là ' + max + ", giá trị trung bình của mảng là:  " + (vitri / 10))
+        }
+        function bai5() {
+            let a = [];
+            let b = 0;
+            for (let i = 0; i < 5; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+                if (a[i] < 0) {
+                    b += 1;
+                }
+            }
+            alert(' trong chuỗi có ' + b + ' phần tử là số âm')
+        }
+        function bai4() {
+            let a = [];
+            let b = 0;
+            for (let i = 0; i < 5; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+
+            }
+            alert(a.reverse)
+        }
+        function bai6() {
+            let a = [];
+            let b;
+            const v = 9;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+            }
+            for (let i = 0; i < 10; i++) {
+                if (a[i] == 9) {
+                    b = 'V is in the array'
+                    break;
+                } else {
+                    b = 'V is not in the array'
+                }
+
+            } alert(b);
+
+
+        }
+        function bai7() {
+            let a = [];
+            let b;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+            }
+            b = prompt('nhập V: ')
+            for (var j = 0; j < a.length; j++) {
+                if (b == a[j]) {
+                    a.splice(j, 1);
+                    a.push(0);
+                }
+               
+            } alert(a)
+
+        }
+        function bai8() {
+            let a = [];
+            let b;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+            }
+            a.sort(function(c,b){
+                return c-b;
+            });alert(a)
+        }
+        function bai9(){
+            var a=[];
+            var b=[];
+            var c=[];
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+        }  for (let i = 0; i < 10; i++) {
+                b[i] = prompt('nhap phan tu cho b: ')
+        }
+        c=a.concat(b);
+        alert(c)
+    }
+    </script>
+</body>
+
+</html>

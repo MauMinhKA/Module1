@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Từ điển</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+   <p>Nhập từ cần dịch: <input  id="eng" onchange="dich()" ><br></p>
+   
+
+   <input id="vn" disabled>
+   <script>
+       var DienTus = {
+    "hello": "Xin chào",
+    "one": "Một",
+    "two": "hai",
+    "three": "ba",
+    "four": "bốn",
+    "five": "năm"
+}
+function dich() {
+    let word = document.getElementById("eng").value;
+    let a = Tra(word);
+    document.getElementById("vn").value = a;
+}
+function Tra(word) {
+    for (const key in DienTus) {
+        if (DienTus.hasOwnProperty(word)) {
+            const element = DienTus[word];
+            return element;
+        } else {
+            return "từ này k có trong từ điển";
+        }
+    }
+}
+   </script>
+</body>
+</html>

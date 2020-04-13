@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tic tac toe</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <script>
+        let board = [];
+        let data = " ";
+        for (let i = 0; i < 10; i++) {
+            board[i] = new Array(".", ".", ".", ".", ".",".", ".", ".", ".", ".");
+        }
+        let check = false;
+    
+        function changeValue() {
+            let positionX = parseInt(prompt("X: "));
+            let positionY = parseInt(prompt("Y: "));
+            data = '';
+            if (check) {
+                board[positionX][positionY] = "x";
+                check = false;
+            } else {
+                board[positionX][positionY] = "o";
+                check = true;
+            }
+             display();
+             checkResult();
+           
+           
+           
+        }
+    
+        function display() {
+            data = ' ';
+            for (let i = 0; i < 10; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 10; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            data += "</br><input type='button' value='Change Value' onclick='changeValue()'>";
+            document.body.innerHTML = ' ';
+            document.write(data);
+        }
+    
+        display();
+        
+    
+        function checkResult() {
+            for (i = 0; i < 10; i++) {
+                for (j = 0; j < 10; j++) {
+                    if (board[i][j] == 'o' && board[i][j + 1] == 'o' && board[i][j + 2] == 'o') {
+                        alert("o thắng");
+                    }
+                    else if (board[i][j] == 'o' && board[i + 1][j] == 'o' && board[i + 2][j] == 'o') {
+                        alert("o thắng");
+                    }
+                    else  if (board[i][j] == 'o' && board[i + 1][j + 1] == 'o' && board[i + 2][j + 2] == 'o') {
+                        alert('o thắng');
+                    }
+                    else   if (board[i][j] == 'o' && board[i - 1][j + 1] == 'o' && board[i - 2][j + 2] == 'o') {
+                        alert('o thắng');
+                    }
+                    else    if (board[i][j] == 'x' && board[i][j + 1] == 'x' && board[i][j + 2] == 'x' ){
+                        alert("x thắng");
+                    }
+                    else  if (board[i][j] == 'x' && board[i + 1][j] == 'x' && board[i + 2][j] =='x') {
+                        alert("x thắng");
+                    }
+                    else   if (board[i][j] == 'x'&& board[i + 1][j + 1] == 'x' && board[i + 2][j + 2] == 'x') {
+                        alert('x thắng');
+                    }
+                    if (board[i][j] == 'x' && board[i - 1][j + 1] == 'x' && board[i - 2][j + 2] == 'x') {
+                        alert('x thắng');
+                    }
+                }
+            }
+    
+    
+        }
+    
+    
+    
+    
+    </script>
+    
+    </body>
+
+</html>

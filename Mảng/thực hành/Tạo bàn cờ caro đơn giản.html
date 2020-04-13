@@ -12,38 +12,74 @@
 
 <body>
     <script>
-        let A_array = [];
+        let board = [];
         let data = " ";
         for (let i = 0; i < 5; i++) {
-            A_array[i] = new Array(1, 1, 1, 1, 1);
+            board[i] = new Array('.', '.', '.', '.', '.');
         }
-        function display() {
-            data = '';
-            for (let i = 0; i < 5; i++) {
-                data += "<br/>";
-                for (let j = 0; j < 5; j++) {
-                    data += A_array[i][j] + "&emsp;";
-                }
-            }
-            document.body.innerHTML = ' ';
-            document.write(data);
-        }
-        display();
-
         let check = false;
         function changeValue() {
             let positionX = parseInt(prompt("X: "));
             let positionY = parseInt(prompt("Y: "));
             data = '';
             if (check) {
-                A_array[positionX][positionY] = "X";
+                board[positionX][positionY] = "X";
                 check = false;
             } else {
-                A_array[positionX][positionY] = "Y";
-                check = true;
+                board[positionX][positionY] = "O";
+                check = true; S
             }
+            
             display();
+           
         }
+        function display() {
+            data = '';
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&emsp;";
+                }
+            }
+            document.body.innerHTML = ' ';
+            document.write(data);
+            
+        }
+        chekKQ();
+        display();
+        
+        
+        function chekKQ() {
+            for (var i = 0; i<5 ; i++) {
+                for (var j = 1; j < 5; j++) {
+                    if (board[i][j] == 'o' && board[i][j + 1] == 'o' && board[i][j + 2] == 'o') {
+                    alert("o thắng");
+                }
+                if (board[i][j] == 'o' && board[i + 1][j] == 'o' && board[i + 2][j] == 'o') {
+                    alert("o thắng");
+                }
+                if (board[i][j] == 'o' && board[i + 1][j + 1] == 'o' && board[i + 2][j + 2] == 'o') {
+                    alert('o thắng');
+                }
+                if (board[i][j] == 'o' && board[i - 1][j + 1] == 'o' && board[i - 2][j + 2] == 'o') {
+                    alert('o thắng');
+                }
+                if (board[i][j] == 'x' && board[i][j + 1] == 'x' && board[i][j + 2] == 'x' ){
+                    alert("x thắng");
+                }
+                if (board[i][j] == 'x' && board[i + 1][j] == 'x' && board[i + 2][j] =='x') {
+                    alert("x thắng");
+                }
+                if (board[i][j] == 'x'&& board[i + 1][j + 1] == 'x' && board[i + 2][j + 2] == 'x') {
+                    alert('x thắng');
+                }
+                if (board[i][j] == 'x' && board[i - 1][j + 1] == 'x' && board[i - 2][j + 2] == 'x') {
+                    alert('x thắng');
+                }
+            }
+        }
+    }
+
     </script>
     <p><br></p>
     <button onclick="changeValue()">changeValue</button>

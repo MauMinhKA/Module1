@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luyện tập mảng 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div style="margin-left: 45%;">
+        <button onclick="bai1()"> bài 1</button><br><br>
+        <button onclick="bai2()"> bài 2</button><br><br>
+        <button onclick="bai3()"> bài 3</button><br><br>
+        <button onclick="bai4()"> bài 4</button><br><br>
+        <button onclick="bai4()"> bài 5</button><br><br>
+        <button onclick="bai4()"> bài 6</button><br><br>
+
+    </div>
+    <script>
+        function bai1() {
+            var a = [[1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]];
+
+            var data = "";
+            for (var i = 0; i < 5; i++) {
+                document.write("row " + i + '<br>');
+
+                for (var j = 0; j < 4; j++) {
+                    document.write(" " + a[i][j] + '<br>');
+                }
+            }
+        }
+        function bai2(){
+            let a = [];
+            let b;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu cho a: ')
+            }
+            // a.sort(function(c,b){
+            //     return c-b;
+           alert(a.sort())
+        }
+        function bai3(){
+            var a=[1,23,4,5,6,7,'mau','phong']
+            alert("số ký tự trong mảng là "+a.length)
+        }
+        function bai4(){
+            var a=[];
+            var b=[];
+            var c="";
+            for( var i=0;i<5;i++){
+                a[i]=prompt('nhap phan tu cho a: ')
+            }for( var j=0;j<5;j++){
+                b[j]=prompt('nhap phan tu cho b: ')
+            }for( var k=0;k<5;k++){
+                if(a[k]==b[k]){
+                   c='chuoi a va b giong nhau'
+                }else{
+                    c='hai chuoi khong giong nhau'
+                    break;
+                }
+            }alert(c)
+
+        }
+        
+
+    </script>
+</body>
+
+</html>
