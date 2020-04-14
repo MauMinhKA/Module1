@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>kiểm tra số nguyên tố</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <input id="input" oninput="check()"> <span id='result'></span><br>
+    <!-- <input id="input02" oninput="check2()"> <span id='result02'></span> -->
+    <script>
+        function isPrime() {
+            let number = document.getElementById('input').value;
+            if (number == 2 || number == 3) {
+                return true;
+            }
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                } else {
+                    return true
+                }
+            }
+        }
+        function check() {
+
+            if (isPrime()) {
+                document.getElementById('result').innerHTML = " là số nguyên tố";
+            }
+            else {
+                document.getElementById('result').innerHTML = " không phải là số nguyên tố";
+            }
+        }
+        // // function check2() {  
+        //     let number02 = document.getElementById('input02').value;       
+        //     var a = true;      
+        //     if (number02 < 2) {
+        //         a = false;
+        //     }
+        //     else if (number02 == 2) {
+        //         a = true;
+        //     }
+        //     else if (number02 % 2 == 0) {
+        //         a = false;
+        //     }
+        //     else {
+        //         for (var i = 3; i < number02 - 1; i += 2) {
+        //             if (number02 % i == 0) {
+        //                 a = false;
+        //                 break;
+        //             }
+        //         }
+        //     }
+        //     if (a) {
+        //         document.getElementById('result02').innerHTML=number02 + " là số nguyên tố <br/>";
+        //     }
+        //     else {
+        //         document.getElementById('result02').innerHTML=number02 + " k phai là số nguyên tố <br/>";
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bebc599-f953-49f7-bdbb-8835d3b82d76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" beforeDir="false" afterPath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hàm/thực hành/Tạo và gọi hàm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Hàm/thực hành/Tạo và gọi hàm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hàm/thực hành/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Hàm/thực hành/demo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +40,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Cấu trúc lặp/thực hành/VongLapFor_bai1_bai2.html" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -80,6 +84,7 @@
       <workItem from="1586339890357" duration="9000" />
       <workItem from="1586488037027" duration="267000" />
       <workItem from="1586536727457" duration="8000" />
+      <workItem from="1586831430811" duration="3425000" />
     </task>
     <servers />
   </component>
@@ -95,6 +100,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586102170839" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586831430838">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586831430838" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586488190249">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

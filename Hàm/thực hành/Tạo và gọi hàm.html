@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tạo và gọi hàm</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+
+        function processConfirm(answer) {
+            let result = "";
+            if (answer) {
+                result = "Người dùng vừa bấm Ok.";
+            } else {
+                result = "Người dùng vừa bấm center.";
+            }
+            return result;
+        }
+        
+        let confirmAnswer = confirm("Shall we play a game?");
+        let theAnswer = processConfirm(confirmAnswer);
+        alert(theAnswer);
+        
+    </script>
+    </body>
+</body>
+</html>
