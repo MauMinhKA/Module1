@@ -6,21 +6,27 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
+    <!-- <input ></input> -->
+
     <script>
         let arr_sp = ["iphone", "samsung", "xiaomi"];
+        let st= "style="+'"background-color: cyan; border-radius: 15%;height: 40px;width: 80px;margin-left:25px"';
+        let st1= "style="+'"height: 40px;border-radius: 5pt;width: 250px;"';
+        
         function display() {
             document.body.innerHTML = "";
-            let sout = "<input type='text' id='sp'> <button onclick='getSP()'>Add</button>";
-            sout += "<table>";
+            let sout = "<input "+st1+"  type='text' id='sp'> <button "+st+" onclick='getSP()'>Add</button>";
+            sout += "<table >";
             for (let i = 0; i < arr_sp.length; i++) {
-                sout += "<tr>"
-                sout += "<td>" + arr_sp[i] + "</td>";
-                sout += "<td> <button onclick='editSP(" + i + ")'>Edit</button></td>"
-                sout += "<td> <button onclick='deleteSP(" + i + ")'>Delete</button></td>"
+                sout += "<tr >"
+                sout += "<td "+st1+">" + arr_sp[i] + "</td>";
+                sout += "<td> <button "+st+" onclick='editSP(" + i + ")'>Edit</button></td>"
+                sout += "<td> <button "+st+" onclick='deleteSP(" + i + ")'>Delete</button></td>"
                 sout += "</tr>"
             }
             sout += "</table>"
