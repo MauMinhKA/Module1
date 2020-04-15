@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Chuyển đổi giữa feet và meters</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+     <input type="text" id="amount">
+    From current: <select id="fromCurrent">
+        <option>feet</option>
+        <option>meters</option>
+        
+    </select>
+    To current: <select id="toCurrent">
+        <option>feet</option>
+        <option>meters</option>
+        <!-- meters=vnd -->
+    </select>
+    <button type="button" onclick="convert()">Convert</button>
+    <p id="result"></p>
+    <script>
+        let amount = document.getElementById("amount");
+        let toCurrent = document.getElementById("toCurrent");
+        let fromCurrent = document.getElementById("fromCurrent");
+        function convert() {
+            let result;
+            if (fromCurrent.value === "feet" && toCurrent.value === "meters") {
+                result = amount.value * 0.305;
+                document.getElementById("result").innerText = result + "";
+            } else if (fromCurrent.value === "meters" && toCurrent.value === "feet") {
+                
+                result = amount.value *3.279;
+                document.getElementById("result").innerText = result + "";
+            } else {
+                alert("yêu cầu chọn hai đơn vị khác nhau") 
+            }
+            
+        }
+    </script>
+
+</body>
+
+</html>

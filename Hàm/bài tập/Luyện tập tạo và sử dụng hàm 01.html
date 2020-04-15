@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>tạo và sử dụng hàm 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <button onclick="bai1()">bài 1</button> <br><br>
+    <button onclick="bai2()">bài 2</button> <br><br>
+    <button onclick="bai3()">bài 3</button> <br><br>
+    <button onclick="bai4()">bài 4</button> <br><br>
+    <button onclick="bai5()">bài 5</button> <br><br>
+
+
+
+    <script>
+        function bai1() {
+            alert('xin chao !!')
+        }
+        function tangso() {
+            b = prompt(' ipnut b: ')
+            return ++b;
+        }
+        function bai2() {
+            alert(tangso());
+        }
+        function bai3() {
+            var a = parseInt(prompt(' ipnut a: '))
+            var b = parseInt(prompt(' ipnut b: '))
+
+            if (a < b) {
+                alert(a + ' bé hơn ' + b)
+            } else {
+                alert("tổng của a và b là : " + a + b)
+            }
+        }
+        function functionbai4() {
+            firstNum = 4;
+            secondNum = 8;
+            result = firstNum + secondNum;
+            return result;
+        }
+        function bai4() {
+            result = 0;
+            alert("gái trị của biến result lúc ban đầu: " + result);
+            result = functionbai4();
+            alert("gái trị của biến result lúc gọi lại hàm: " + result);
+        }
+        function bai5() {
+            var a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            var b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+            var c = prompt("nhap vao ten ngoi sao: ");
+            var check;
+            for (var i = 0; i < a.length; i++) {
+                if (c === a[i]) {
+                    alert("chòm sao tương ứng sao " + a[i] + " là sao " + b[i])
+                    check=true;
+                } 
+            } 
+            if(check){
+            }else{
+                alert("khoong có chòm sao tương ứng với "+c)
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <div style="margin-left: 45%;">
+        <button onclick="bai1()">bài 1</button> <br><br>
+        <button onclick="bai2()">bài 2</button> <br><br>
+        <button onclick="bai3()">bài 3</button> <br><br>
+        <button onclick="bai4()">bài 4</button> <br><br>
+        <button onclick="bai5()">bài 5</button> <br><br>
+        <button onclick="bai6()">bài 6</button> <br><br>
+        <button onclick="bai7()">bài 7</button> <br><br>
+        <button onclick="bai8()">bài 8</button> <br><br>
+        <button onclick="bai9()">bài 9</button> <br><br>
+    </div>
+
+    <script>
+        function bai1() {
+            var a = parseInt(prompt("nhập a: "));
+            a = a * a;
+            alert(a)
+        }
+        function cvdt(r) {
+            var chuvi = 2 * r * 3.14;
+            var dientich = r * r * 3.14;
+            return chuvi;
+        } function cvdt1(r) {
+            var chuvi = 2 * r * 3.14;
+            var dientich = r * r * 3.14;
+            return dientich;
+        }
+        function bai2() {
+            var c = prompt('nhap ban kinh hinh tron: ')
+            alert('chuvi: ' + cvdt(c));
+            alert('dientich: ' + cvdt1(c));
+
+        }
+        function giaithua(a) {
+            if (a == 2) {
+                return 2;
+            }
+            return a * giaithua(a - 1);
+        }
+        function bai3() {
+            var c = prompt('nhap so can tinh giai thua: ')
+            alert(giaithua(c));
+        }
+        function bai4() {
+            var c = prompt('')
+            isNaN(c);
+            // alert(isNaN(c));
+
+            if (isNaN(c)) {
+                alert('fasle')
+            } else {
+                alert('true')
+            }
+        }
+        function bai5() {
+            var a = prompt(" nhập số a:");
+            var b = prompt(" nhập số b:");
+            var c = prompt(" nhập số c:");
+
+            if (a > b) {
+                if (b > c) {
+                    alert(" số nhỏ nhất là " + c);
+                } else {
+                    alert(" số nhỏ nhất là " + b);
+                }
+            } else {
+                if (a > c) {
+                    alert(" số nhỏ nhất là " + c);
+                } else {
+                    alert(" số nhỏ nhất là " + a);
+                }
+            }
+        }
+        function bai6(){
+            var b
+            var a=parseInt(prompt('input a: '))
+            if(a>0){
+               b=true
+            }else{
+                b=false
+            }
+            alert(b)
+        }
+        function  bai7(){
+            var a=[];
+            a[0]=prompt('nhap so thu nhat');
+            a[1]=prompt('nhap so thu hai');
+            var c;
+            c=a[0];
+            a[0]=a[1];
+            a[1]=c;
+            alert(a)
+        }
+        function bai8(){
+            var arr=[];
+            for(var i=0;i<=5;i++){
+                arr[i]=prompt('nhap phan tu cho mang! ')
+            }
+            alert(arr.reverse());
+        }
+        function bai9() {
+            let a = [];
+            let b=0;
+            for (let i = 0; i < 10; i++) {
+                a[i] = prompt('nhap phan tu thu '+i+ ' cho mang: ')
+            }
+            let c=parseInt(prompt('nhap so can check'))
+            for (let i = 0; i < a.length-1; i++) {
+                if (a[i] == c) {
+                   b+=1;
+                } 
+            } 
+            if(0<=b){
+                alert('số lần xuất hiện của '+c+" là "+b+" lần")
+            }else{
+                alert(-1)
+            }
+           
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

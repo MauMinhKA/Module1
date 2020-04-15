@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <script>
+        let arr_sp = ["iphone", "samsung", "xiaomi"];
+        function display() {
+            document.body.innerHTML = "";
+            let sout = "<input type='text' id='sp'> <button onclick='getSP()'>Add</button>";
+            sout += "<table>";
+            for (let i = 0; i < arr_sp.length; i++) {
+                sout += "<tr>"
+                sout += "<td>" + arr_sp[i] + "</td>";
+                sout += "<td> <button onclick='editSP(" + i + ")'>Edit</button></td>"
+                sout += "<td> <button onclick='deleteSP(" + i + ")'>Delete</button></td>"
+                sout += "</tr>"
+            }
+            sout += "</table>"
+            document.write(sout)
+        }
+        function getSP() {
+            let sp = document.getElementById("sp").value;
+            addSP(sp);
+        }
+        function addSP(sp) {
+            arr_sp.push(sp);
+            display();
+        }
+        function editSP(index) {
+            let sp = prompt('edit name: ');
+            arr_sp[index] = sp;
+            display();
+        }
+        function deleteSP(index) {
+            if (confirm("Bạn có thật sự muốn xóa product " + arr_sp[index] + " hay không?")) {
+                arr_sp.splice(index, 1)
+            }
+            display();
+        }
+        display();
+    </script>
+</body>
+
+</html>
