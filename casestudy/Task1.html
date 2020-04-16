@@ -8,59 +8,67 @@
 </head>
 
 <body>
-<div class="inP">
-  <p>Input name: <input id="name" type="text"></p>
-  <p>Input CMND: <input id="cmnd" type="number"></p>
-  <p>Input Birth day: <input id="birthday" type="date"></p>
-  <p>Input Email: <input id="email" type="text"></p>
-  <p>Input Address: <input id="address" type="text"></p>
-  <p>Input Discount: <input id="discount" type="number"></p>
-  <p>Input Renday: <input id="renday" type="number"></p>
-  <p>Input QuantityIncluded: <input id="quantityIncluded"></p>
+  <div class="inP">
+    <p>Input name: <input id="name" type="text"></p>
+    <p>Input CMND: <input id="cmnd" type="number"></p>
+    <p>Input Birth day: <input id="birthday" type="date"></p>
+    <p>Input Email: <input id="email" type="text"></p>
+    <p>Input Address: <input id="address" type="text"></p>
+    <p>Input Discount: <input id="discount" type="number"></p>
+    <p>Input Renday: <input id="renday" type="number"></p>
+    <p>Input QuantityIncluded: <input id="quantityIncluded"></p>
 
-  <p>Select Type Customer: <select id="typeCustomer">
-      <option value="diamond">Diamond</option>
-      <option value="platinum">Platinum</option>
-      <option value="gold">Gold</option>
-      <option value="silver">Silver</option>
-      <option value="member">Member</option>
-    </select></p>
-  <p>Select TypeRoom: <select id="typeRoom">
-      <option value="vip">Vip</option>
-      <option value="business">Business</option>
-      <option value="normal">Normal</option>
-    </select></p>
-  <p>Select TypeSevice: <select id="typesevice">
-      <option value="villa">Villa</option>
-      <option value="house">House</option>
-      <option value="room">Room</option>
-    </select></p>
-  <button onclick="toTal()">Total</button>
-  <p id="kq">kết quả</p>
-</br>
-</div>
-<script>
- 
-  function toTal() {
-  let name = document.getElementById("name").value;
-  let cmnd = document.getElementById("cmnd").value;
-  let birthday = document.getElementById("birthday").value;
-  let email = document.getElementById("email").value;
-  let address = document.getElementById("address").value;
-  let typeSevice = document.getElementById("typesevice").value;
-  let typeRoom = document.getElementById("typeRoom").value;
-  let typeCustomer = document.getElementById("typeCustomer").value;
-  let quantityIncluded = document.getElementById("quantityIncluded").value;
+    <p>Select Type Customer: <select id="typeCustomer">
+        <option value="diamond">Diamond</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="member">Member</option>
+      </select></p>
+    <p>Select TypeRoom: <select id="typeRoom">
+        <option value="vip">Vip</option>
+        <option value="business">Business</option>
+        <option value="normal">Normal</option>
+      </select></p>
+    <p>Select TypeSevice: <select id="typesevice">
+        <option value="villa">Villa</option>
+        <option value="house">House</option>
+        <option value="room">Room</option>
+      </select></p>
+    <button onclick="toTal()">Total</button>
+    <p id="kq">kết quả</p>
+    </br>
+  </div>
+  <script>
+    let name = document.getElementById("name").value;
+    let cmnd = document.getElementById("cmnd").value;
+    let birthday = document.getElementById("birthday").value;
+    let email = document.getElementById("email").value;
+    let address = document.getElementById("address").value;
+    let typeSevice = document.getElementById("typesevice").value;
+    let typeRoom = document.getElementById("typeRoom").value;
+    let typeCustomer = document.getElementById("typeCustomer").value;
+    let quantityIncluded = document.getElementById("quantityIncluded").value;
     let discount = parseInt(document.getElementById("discount").value)
     let renday = parseInt(document.getElementById("renday").value)
     var totalPay = 300 * renday * (1 - discount / 100);
-  
-    document.getElementById("kq").innerHTML = "Khách Hàng "+name+"<br>"+"Sinh Ngày: "+birthday+"<br>"
-    + " số CMND: "+cmnd+"<br>"+" Địa chỉ Email: "+ email+'<br>'+
-    "địa chỉ: "+address+"<br>"+typeSevice+"<br>"+typeRoom+"<br>"+typeCustomer
-    +"<br>"+discount+"<br>"+renday+"<br>"+"Tổng Tiền: "+totalPay ;
-   
-  }
-</script>
+    function toTal() {
+      alert("Khách Hàng " + name + "\n" +
+        "Sinh Ngày: " + birthday + "\n" +
+        " Số CMND: " + cmnd + "\n" +
+        " Địa chỉ Email: " + email + "\n" +
+        "Địa chỉ: " + address + "\n" +
+        'Loại dịch vụ: ' + typeSevice + "\n" +
+        'Loại phòng: ' + typeRoom + "\n" +
+        'Loại khách hàng: ' + typeCustomer + "\n" +
+        'Giảm giá' + discount + '%' + "\n" +
+        'ngày thuê' + renday + "\n" +
+        'total: ' + toTal);
+
+    }
+
+
+  </script>
 </body>
+
 </html>

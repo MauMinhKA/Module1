@@ -24,57 +24,87 @@
         let quantityincluded = 7;
         let renday = 10;
         let totalpay;
+        let check = false;
 
-        let choose = parseInt(prompt('1.Hiển thị thon tin khách hàng.' + '\n' +
-            '2.Chỉnh sửa thông tin khách hàng.' + '\n' +
-            '3.Hiển thị giá sau khi được giảm giá'))
+        let tempName= "";
+        name = prompt("input name: ");
+        name= name.trim().toLowerCase();
+        for( let i=0; i<name.length; i++){
+            if(name.charAt(i)===" "&&name.charAt(i+1)===" "){
+                continue;
+            }
+            if(i===0||name.charAt(i-1)===" "){
+                tempName+=name.charAt(i).toUpperCase();
+                continue;
+            }
+            tempName+=name.charAt(i);
+            
+        }alert(tempName)
 
-        switch (choose) {
-            case 1:
-                alert("Khách Hàng " + name + "\n" +
-                    "Sinh Ngày: " + birthday + "\n" +
-                    " Số CMND: " + cmnd + "\n" +
-                    " Địa chỉ Email: " + email + "\n" +
-                    "Địa chỉ: " + address + "\n" +
-                    'Loại dịch vụ: ' + typeSevice + "\n" +
-                    'Loại phòng: ' + typeRoom + "\n" +
-                    'Loại khách hàng: ' + typeCustomer + "\n" +
-                    'Giảm giá' + discount + '%' + "\n" + 'ngày thuê' + renday)
-                    break;
-            case 2:
-                let chooseEdit = parseInt(prompt(
-                    "1.Khách Hàng " + name + "\n" +
-                    "2.Sinh Ngày: " + birthday + "\n" +
-                    "3.Số CMND: " + cmnd + "\n" +
-                    "4.Địa chỉ Email: " + email + "\n" +
-                    "5.Địa chỉ: " + address + "\n" +
-                    '6.Loại dịch vụ: ' + typeSevice + "\n" +
-                    '7.Loại phòng: ' + typeRoom + "\n" +
-                    '8.Loại khách hàng: ' + typeCustomer + "\n" +
-                    '9.Giảm giá' + discount + '%' + "\n" + 
-                    '10.ngày thuê' + renday));
+        // let choose = parseInt(prompt('1.Hiển thị thon tin khách hàng.' + '\n' +
+        //     '2.Chỉnh sửa thông tin khách hàng.' + '\n' +
+        //     '3.Hiển thị giá sau khi được giảm giá'))
 
-                    switch(chooseEdit){
-                        case 1:
-                        name=prompt('Enter name');
-                        break;
-                        default:
-                        alert('Failer')
-                    }
-                    alert("Khách Hàng " + name + "\n" +
-                    "Sinh Ngày: " + birthday + "\n" +
-                    " Số CMND: " + cmnd + "\n" +
-                    " Địa chỉ Email: " + email + "\n" +
-                    "Địa chỉ: " + address + "\n" +
-                    'Loại dịch vụ: ' + typeSevice + "\n" +
-                    'Loại phòng: ' + typeRoom + "\n" +
-                    'Loại khách hàng: ' + typeCustomer + "\n" +
-                    'Giảm giá' + discount + '%' + "\n" + 'ngày thuê' + renday)
-                    break;
-                    default:
-                    alert('Sự lựa chọn của bạn không có trong chương trình')
+        // switch (choose) {
+        //     case 1:
+        //         alert("Khách Hàng " + name + "\n" +
+        //             "Sinh Ngày: " + birthday + "\n" +
+        //             " Số CMND: " + cmnd + "\n" +
+        //             " Địa chỉ Email: " + email + "\n" +
+        //             "Địa chỉ: " + address + "\n" +
+        //             'Loại dịch vụ: ' + typeSevice + "\n" +
+        //             'Loại phòng: ' + typeRoom + "\n" +
+        //             'Loại khách hàng: ' + typeCustomer + "\n" +
+        //             'Giảm giá' + discount + '%' + "\n" + 'ngày thuê' + renday)
+        //             break;
+        //     case 2:
+        //         let chooseEdit = parseInt(prompt(
+        //             "1.Khách Hàng " + name + "\n" +
+        //             "2.Sinh Ngày: " + birthday + "\n" +
+        //             "3.Số CMND: " + cmnd + "\n" +
+        //             "4.Địa chỉ Email: " + email + "\n" +
+        //             "5.Địa chỉ: " + address + "\n" +
+        //             '6.Loại dịch vụ: ' + typeSevice + "\n" +
+        //             '7.Loại phòng: ' + typeRoom + "\n" +
+        //             '8.Loại khách hàng: ' + typeCustomer + "\n" +
+        //             '9.Giảm giá' + discount + '%' + "\n" + 
+        //             '10.ngày thuê' + renday));
 
-        }
+        //             switch(chooseEdit){
+        //                 case 1:
+        //                 name=prompt('Enter name');
+        //                 break;case 2:
+        //                 birthday=prompt('Enter birthday');
+        //                 break;case 3:
+        //                 cmnd=prompt('Enter cmnd');
+        //                 break;case 4:
+        //                 email=prompt('Enter email');
+        //                 break;case 5:
+        //                 address=prompt('Enter address');
+        //                 break;case 6:
+        //                 typeSevice=prompt('Enter typeSevice');
+        //                 break;case 7:
+        //                 typeRoom=prompt('Enter typeRoom');
+        //                 break;case 8:
+        //                 typeCustomer=prompt('Enter typeCustom');
+        //                 break;
+        //                 default:
+        //                 alert('Failer')
+        //             }
+        //             alert("Khách Hàng " + name + "\n" +
+        //             "Sinh Ngày: " + birthday + "\n" +
+        //             " Số CMND: " + cmnd + "\n" +
+        //             " Địa chỉ Email: " + email + "\n" +
+        //             "Địa chỉ: " + address + "\n" +
+        //             'Loại dịch vụ: ' + typeSevice + "\n" +
+        //             'Loại phòng: ' + typeRoom + "\n" +
+        //             'Loại khách hàng: ' + typeCustomer + "\n" +
+        //             'Giảm giá' + discount + '%' + "\n" + 'ngày thuê' + renday)
+        //             break;
+        //             default:
+        //             alert('Sự lựa chọn của bạn không có trong chương trình')
+
+        
     </script>
 </body>
 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Funny circles</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div style="margin-left: 40%;margin-top: 1%;width: 20%;">
+        <div style="text-align: center;">
+            <button onclick="createCircle01()">cách vẽ 1</button><br><br>
+            <canvas id="myCanvas01" width="200" height="200" style="border:3px solid #0bdd51;"></canvas>
+        </div><br>
+        <div style="text-align: center;">
+            <button onclick="createCircle02()">cách vẽ 2</button><br><br>
+            <canvas id="myCanvas02" width="200" height="200" style="border:3px solid #0bdd51;"></canvas>
+        </div><br>
+        <div style="text-align: center;">
+            <button onclick="createCircle03()">cách vẽ 3</button><br><br>
+            <canvas id="myCanvas03" width="200" height="200" style="border:3px solid #0bdd51;"></canvas>
+        </div><br>
+    </div>
+    <script>
+        function Circle(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.getX = function () { return this.x; }
+            this.getY = function () { return this.y; }
+            this.getRadius = function () { return this.radius; }
+        }
+        function createCircle011() {
+            var c = document.getElementById("myCanvas01");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(100, 100, 50, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+        function createCircle01() {
+            createCircle011();
+        }
+        function createCircle022() {
+            var ctx = document.getElementById("myCanvas02").getContext("2d");
+            var radius = Math.floor(Math.random() * 80);
+            var circle = new Circle(100, 100, radius);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        function createCircle02() {
+            createCircle022();
+        }
+        function createCircle033() {
+            var ctx = document.getElementById("myCanvas03").getContext("2d");
+            var radius = Math.floor(Math.random() * 80);
+            var circle = new Circle(100, 100, radius);
+            ctx.beginPath();
+            ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        function createCircle03() {
+            createCircle033();
+        }
+func 
+
+    </script>
+</body>
+
+</html>
