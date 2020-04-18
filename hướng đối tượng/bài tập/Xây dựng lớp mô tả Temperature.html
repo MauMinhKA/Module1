@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Xây dựng lớp mô tả Temperature</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        class Temperature {
+            constructor(doC) {
+                this.doC=doC;
+                // this.doF=doF;
+                // this.doKenvin=doKenvin;
+            }
+            chuyendoF() {
+              return  ((this.doC*9)/5)+32;
+            }
+            doKenvin() {
+              return   this.doC+273;
+            }
+        }
+        let a=new Temperature(25);
+        alert('chuyen 25 do C quan do F: '+a.chuyendoF());
+        alert('chuyen 25 do C quan do Kenvin: '+a.doKenvin());
+
+    </script>
+</body>
+
+</html>

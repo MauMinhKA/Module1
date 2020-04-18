@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <canvas style="align-items: center;" id="myCanvas" width="1000" height="1000" style="border:3px solid #0bdd51;"></canvas>
+    <script>
+        
+        let Rectangle = function (height, width) {
+            this.height = height;
+            this.width = width;
+
+            this.getHeight = function () { return height };
+            this.getWidth = function () { return width };
+            this.getCV = function () { return 2 * (width + height); }
+            this.getDT = function () { return width * height; }
+
+            this.setHeight = function (height) { this.height = height }
+            this.setWidth = function (width) { this.width = width }
+        }
+        let cd = parseInt(prompt('nhap chieu dai: '));
+        let cr = parseInt(prompt('nhap chieu rong: '));
+        let hcn = new Rectangle(cd, cr);
+        let cv = hcn.getCV();
+        let dt = hcn.getDT();
+        alert('chu vi= ' + cv + ' dien tich= ' + dt);
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        ctx.fillRect(10, 10, cd, cr);
+    </script>
+</body>
+
+</html>
