@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <script>
+        let arrNameCustomer = [];
+        while (true) {
+
+            
+            let choose = parseInt(prompt("1.Add new Customer " + "\n" + "2.Delete Customer"));
+            switch (choose) {
+                case 1: {
+                    let number = parseInt(prompt("Enter name Customer you want add to arr: "));
+                    for (let i = 0; i < number; i++) {
+                        let nameCustomer = prompt("Enter name of customer: ");
+                        arrNameCustomer.push(nameCustomer);
+                    }
+                    let result = "";
+                    arrNameCustomer.sort();
+                    for (let i = 0; i < arrNameCustomer.length; i++) {
+                        result += (i + 1) + ". " + arrNameCustomer[i] + "\n";
+                    }
+                    
+                    alert(result)
+                    break;
+                }
+
+                case 2: {
+                    let check = false;
+                    let nameCustomer = prompt("Enter customer you want delete: ");
+                    for (let i = 0; i < arrNameCustomer.length; i++) {
+                        if (nameCustomer === arrNameCustomer[i]) ;
+
+                            arrNameCustomer.splice(i, 1);
+                            check = true;
+                        }
+                    }
+                    if (!check) {
+                        alert("The name does not exist!!")
+                    }
+                    let result = "";
+                    arrNameCustomer.sort();
+                    for (let i = 0; i < arrNameCustomer.length; i++) {
+                        result += (i + 1) + ". " + arrNameCustomer[i] + "\n";
+                    }
+
+                    
+                    alert(result);
+                    break;
+                }
+                default: {
+                    alert("Failed")
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

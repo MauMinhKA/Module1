@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Objects</title>
+</head>
+
+<body>
+  <div id="game"></div>
+  <script>
+    function Hero(image, top, left, size, speed) {
+      this.image = image;
+      this.top = top;
+      this.left = left;
+      this.size = size;
+      this.speed = speed;
+
+      this.getHeroElement = function () {
+        return '<img width="' + this.size + '"' +
+          ' height="' + this.size + '"' +
+          ' src="' + this.image + '"' +
+          ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+      }
+
+      this.moveRight = function () {
+        this.left += this.speed;
+        console.log('ok: ' + this.left);
+      }
+      this.moveLeft = function () {
+        this.left -= this.speed;
+        console.log('ok: ' + this.left);
+      }
+      this.moveBottom = function () {
+        this.top += this.speed;
+        console.log('ok: ' + this.top);
+      }
+      this.moveTop = function () {
+        this.top -= this.speed;
+        console.log('ok: ' + this.top);
+      }
+
+    }
+
+    var hero = new Hero('https://img.zing.vn/upload/gn/source/T5_2016/ngokhong5sao.png', 0, 30, 200, 30);
+    let check = true;
+    let check2 = true;
+    function start() {
+      if (hero.left < window.innerWidth - hero.size && check === true && check2 === true) {
+        hero.moveRight();
+
+      }
+      else if (hero.top < window.innerHeight - hero.size && check2 === true) {
+        hero.moveBottom();
+        check = false;
+      }
+      else if (hero.top > window.innerHeight - hero.size && check === false && hero.left > 0) {
+        hero.moveLeft();
+        check2 = false;
+
+      }
+      else if ( check2 === false && check === false && hero.top > 0) {
+        hero.moveTop();
+  
+      }
+     
+
+      document.getElementById('game').innerHTML = hero.getHeroElement();
+
+      setTimeout(start, 50);
+      
+    }
+
+    start();
+  </script>
+</body>
+
+</html>

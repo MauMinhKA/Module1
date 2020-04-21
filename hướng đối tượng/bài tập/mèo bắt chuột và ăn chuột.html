@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>mèo bắt chuột và ăn chuột.</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        class Mouse {
+            constructor(nameM, weightM, speedM, statusM) {
+                this.nameM = nameM;
+                this.weightM = weightM;
+                this.speedM = speedM;
+                this.statusM = statusM;
+            }
+            chuotkeu() {
+                console.log("chuột kêu: help me!");
+
+            }
+            getSpeedM() {
+                return this.speedM ;
+            }
+            getNameM() {
+                return this.nameM;
+            } 
+            getWeightM() {
+                return this.weightM ;
+            }
+            getStatus() {
+                return this.statusM;
+            }
+            chuotchet(){
+                this.statusM=false;
+            }
+
+        }
+        class Cat {
+            constructor(nameC, weightC, speedC) {
+                this.nameC = nameC;
+                this.weightC = weightC;
+                this.speedC = speedC;
+            }
+            getSpeedC() {
+                return this.speedC ;
+            }
+            getNameC() {
+                return this.nameC ;
+                console.log(this.nameC);
+                
+            }
+            getSpeedC(){
+                return this.speedC;
+            }
+            getWeightC(){
+                return this.weightC;
+            }
+            meokeu(){
+                console.log("chết mày nha con! mèo said:");
+            }
+            batchuot(muose){
+                if(this.speedC>muose.getSpeedM()){
+                    console.log("da bat duoc chuot");
+                    mouse.chuotkeu();
+                    cat.meokeu();
+                    return true;
+                }else{
+                    console.log("khong bat duoc chuot");
+                    return false;
+                }
+            }
+            anchuot(muose){
+                if(muose.getStatus()){
+                    this.weightC+=mouse.getWeightM();
+                    muose.chuotchet();
+                    console.log("Da An Chuot");
+                    console.log("can nang sau khi an chuot: "+cat.getWeightC());
+                    
+                    
+                }else{
+                    console.log("CHuot da chet");
+                    
+                }
+            }
+        }
+        
+        let mouse=new Mouse("Jerry",25,35,true);
+        let cat=new Cat("Tom",30,40);
+        console.log(cat.getNameC()+" - "+cat.getWeightC()+" - "+cat.getSpeedC());
+        console.log(mouse.getNameM()+" - "+mouse.getWeightM()+" - "+mouse.getSpeedM());
+        if(cat.batchuot(mouse)){
+            cat.anchuot(mouse);
+        }
+        
+        
+     
+        
+         
+    </script>
+</body>
+
+</html>
