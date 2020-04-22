@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body onload="init()">
+    <p id="game"></p>
+    <script>
+        class Car {
+            constructor(speed, srcImage, top, left,down,right) {
+                this.speed = speed;
+                this.srcImage = srcImage;
+                this.top = top;
+                this.left = left;
+                this.right=right;
+                this.down=down;
+            }
+            displayCar() {
+                return '<img width="' + 50 + '"' +
+                    ' height="' + 50 + '"' +
+                    ' src="' + this.srcImage + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left +'px; right:'+this.right+ 'px; down:' + this.down +'px;position:absolute;" />';
+            }
+            moveTop() {
+                this.top -= this.speed;
+            }
+            moveLeft() {
+                this.left -= this.speed;
+            }
+            moveRight(){
+                this.right+=this.speed;
+            }
+            moveDown(){
+                this.down+=this.speed;
+            }
+
+        }
+        let car = new Car(20, "car.png", 500, 500,500,500);
+        let direction = "";
+        function move() {
+            switch (direction) {
+                case "top": {
+                    car.moveTop();
+                    break;
+                }
+                case "left": {
+                    car.moveLeft();
+                    break;
+                }
+                case "down": {
+                    car.moveDown();
+                    break;
+                }
+                case "right": {
+                    car.moveRight();
+                    break;
+                }
+            }
+            document.getElementById('game').innerHTML = car.displayCar();
+            setTimeout(move, 500)
+        }
+        function init() {
+            window.addEventListener("keydown", start)
+            move();
+        }
+        function start(evt) {
+            switch (evt.keyCode) {
+                case 38: {
+                    direction = "top";
+                    car.srcImage = "car.png";
+                    break;
+                }
+                case 37: {
+                    direction = "left";
+                    car.srcImage = "carL.png";
+                    break;
+                }
+                case 39: {
+                    direction = "right";
+                    car.srcImage = "carR.png";
+                    break;
+                }
+                case 40: {
+                    direction = "down";
+                    car.srcImage = "carD.png";
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
