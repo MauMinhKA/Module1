@@ -14,7 +14,7 @@
         let arrNameCustomer = [];
         while (true) {
 
-            
+
             let choose = parseInt(prompt("1.Add new Customer " + "\n" + "2.Delete Customer"));
             switch (choose) {
                 case 1: {
@@ -28,7 +28,7 @@
                     for (let i = 0; i < arrNameCustomer.length; i++) {
                         result += (i + 1) + ". " + arrNameCustomer[i] + "\n";
                     }
-                    
+
                     alert(result)
                     break;
                 }
@@ -37,11 +37,12 @@
                     let check = false;
                     let nameCustomer = prompt("Enter customer you want delete: ");
                     for (let i = 0; i < arrNameCustomer.length; i++) {
-                        if (nameCustomer === arrNameCustomer[i]) ;
-
+                        if (nameCustomer === arrNameCustomer[i]) {
                             arrNameCustomer.splice(i, 1);
                             check = true;
                         }
+
+
                     }
                     if (!check) {
                         alert("The name does not exist!!")
@@ -52,7 +53,7 @@
                         result += (i + 1) + ". " + arrNameCustomer[i] + "\n";
                     }
 
-                    
+
                     alert(result);
                     break;
                 }
@@ -61,7 +62,9 @@
                 }
 
             }
+
         }
+
     </script>
 </body>
 

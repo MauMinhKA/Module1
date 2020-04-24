@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Validate số điện thoại</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        function checkSdt(sdt) {
+            check = /^[0-9][0-9][\-]\d{10}$/
+            if (check.test(sdt)) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        var sdt = "84-0978489648";
+        var sdt1 = "8h-0978489648";
+        alert(checkSdt(sdt))
+        alert(checkSdt(sdt1))
+        
+    </script>
+</body>
+
+</html>

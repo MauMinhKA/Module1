@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bebc599-f953-49f7-bdbb-8835d3b82d76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cấu trúc lặp/bài tập/demo copy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hàm/thực hành/Tạo và gọi hàm.html" beforeDir="false" afterPath="$PROJECT_DIR$/Hàm/thực hành/Tạo và gọi hàm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hàm/thực hành/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/Hàm/thực hành/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hướng đối tượng/bài tập/demo.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Cấu trúc lặp/thực hành/VongLapFor_bai1_bai2.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/chuỗi" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,6 +83,7 @@
       <workItem from="1586488037027" duration="267000" />
       <workItem from="1586536727457" duration="8000" />
       <workItem from="1586831430811" duration="3425000" />
+      <workItem from="1587651819558" duration="219000" />
     </task>
     <servers />
   </component>
@@ -92,10 +91,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586488050215">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587651985766">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586488050215" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587651985766" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1587652035654">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587652035654" />
     <state x="277" y="56" key="SettingsEditor" timestamp="1586102170839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

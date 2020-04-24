@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <script>
+        class Remote {
+            constructor(id, statusrm, chuyenkenh, amluong) {
+                this.id = id;
+                this.chuyenkenh = chuyenkenh;
+                this.amluong = amluong;
+                this.statusrm = statusrm;
+            }
+            getChuyenKenh() {
+                return this.chuyenkenh;
+            }
+            getAmLuong() {
+                return this.amluong;
+            }
+
+            getIdrm() {
+                return this.id;
+            }
+            Tat_BatTV() {
+              
+                return this.statusrm;
+                
+            }
+        }
+
+        class Tivi {
+            constructor(idtv, statustv, kenh, amluongtv) {
+                this.kenh = kenh;
+                this.amluongtv = amluongtv;
+                this.statustv = statustv;
+                this.idtv = idtv;
+            }
+            getStatus() {
+                    return this.statustv;
+
+
+            }
+            getIdtv() {
+                return this.idtv;
+            }
+            getkenh() {
+
+                if (this.statustv) {
+                    console.log("kênh đang bật là :" + this.kenh);
+                }
+                else {
+                    console.log("tivi turn off!!");
+                }
+                return this.kenh
+            }
+            setKenh(remote) {
+                if (this.statustv && remote.getIdrm() === this.idtv) {
+                    this.kenh = remote.getChuyenKenh();
+                    console.log("Kênh chuyển lại là: " + this.kenh);
+                }
+            }
+            getAmLuongtv() {
+                if (this.statustv) {
+                    console.log("âm lượng hiện tại: " + this.amluongtv);
+
+                    return this.amluongtv;
+                }
+            }
+
+            setAmLuongtv(remote) {
+                if (this.statustv && remote.getIdrm() === this.idtv) {
+
+                    this.amluongtv = remote.getAmLuong();
+
+                    console.log("âm lượng thay đổi thành: " + this.amluongtv);
+
+                }
+            }
+            setStatustv(remote) {
+                if (this.statustv && remote.getIdrm() === this.idtv) {
+                    this.statustv = remote.Tat_BatTV();
+                    if(this.statustv==false){
+                        console.log("Tv turn Off");
+                        
+                    }
+                }
+            }
+        }
+
+        var tv = new Tivi(01, true, "vtv1", 75);
+        var remote = new Remote(01, false, "vtv3", 77);
+        tv.getStatus();
+        tv.getkenh() + tv.getAmLuongtv();
+        tv.setKenh(remote);
+        tv.setAmLuongtv(remote);
+        tv.setStatustv(remote);
+
+
+
+    </script>
+</body>
+
+</html>

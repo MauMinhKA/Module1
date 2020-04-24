@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>sử dụng biểu thức chính quy</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <button onclick="bai1()">bài 1</button><br><br>
+    <button onclick="bai2()">bài 2</button><br><br>
+    <button onclick="bai3()">bài 3</button><br><br>
+    <button onclick="bai4()">bài 4</button><br><br>
+    <script>
+        function bai11(ngay) {
+            let check = /^(0?[1-9]|[12][0-9]|3[01])[\/]|[\-](0?[1-9]|1[012])[\/]|[\-]\d{4}$/
+            if (check.test(ngay)) {
+                return true;
+            }
+            return false;
+        }
+        function bai1() {
+            var ngay = "31-02-2020"
+            alert(bai11(ngay))
+        }
+        function bai2() {
+            str = prompt("input String: ")
+            alert("số từ trong chuỗi \"" +str+"\" là: " + (str.split("").length - 1));
+
+        }
+        function bai3(){
+            str = prompt("input String: ")
+            a= (str.split(' ').length - 1);
+            a1= (str.split('u').length - 1);
+            a2= (str.split('a').length - 1);
+            a3= (str.split('e').length - 1);
+            a4= (str.split('o').length - 1);
+            a5= (str.split('i').length - 1);
+            a6=a1+a2+a3+a4+a5
+            a7=str.length-a-a6
+        
+            alert("nguyên âm trong chuỗi \"" +str+"\" là: " +a6+"\n"+
+            "phụ âm trong chuỗi \"" +str+"\" là: "+a7);
+        }
+
+        function bai4(){
+        let pass=123;
+        let a=parseInt(prompt("input pass: "))
+        if(a===pass){
+            alert("ma hop le");
+        }else{
+            alert("ma khong dung")
+        }
+        }
+    </script>
+</body>
+
+</html>

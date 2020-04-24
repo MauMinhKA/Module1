@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Làm việc với các đối tượng thông dụng</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <button onclick="date()">Làm việc với Date</button><br><br>
+    <button onclick="math()">Làm việc với Math</button><br><br>
+    <button onclick="string()">Làm việc với đối tượng String</button>
+
+    <p id="show1"></p><br>
+    <p id="show6"></p><br>
+    <p id="show2"></p><br>
+    <p id="show3"></p><br>
+    <p id="show4"></p><br>
+    <p id="show5"></p><br>
+
+
+    <script>
+        function date() {
+
+            var now = new Date();
+            var xmasDay = new Date(1998, 03, 13);
+            var offset = now.getTime() - xmasDay.getTime();
+            var totalYear = Math.round(offset / 1000 / 60 / 60 / 24 / 365);
+            document.getElementById("show1").innerHTML = "bạn sống được: " + totalYear + " năm";
+            var totalMonth = Math.round((offset / 1000 / 60 / 60 / 24 / 30) - xmasDay.getMonth() - 1);
+            document.getElementById("show6").innerHTML = ("bạn sống được: " + totalMonth + " tháng");
+            var totalDays = Math.round(offset / 1000 / 60 / 60 / 24);
+            document.getElementById("show2").innerHTML = ("bạn sống được: " + totalDays + " ngày");
+            var totalHours = Math.round(offset / 1000 / 60 / 60);
+            document.getElementById("show3").innerHTML = "bạn sống được: " + totalHours + " giờ";
+            var totalMinutes = Math.round(offset / 1000 / 60);
+            document.getElementById("show4").innerHTML = "bạn sống được: " + totalMinutes + " phút";
+            var totalSeconds = Math.round(offset / 1000);
+            document.getElementById("show5").innerHTML = "bạn sống được: " + totalSeconds + " giây";
+
+        }
+
+        function math() {
+            alert("số ngẫu nhiên từ 0-10: " + Math.floor(Math.random() * 10) + '\n' +
+                "số ngẫu nhiên từ 0-400: " + Math.floor(Math.random() * 400) + '\n' +
+                "số ngẫu nhiên từ 50-100: " + Math.floor(Math.random() * 50 + 50)
+            );
+        }
+        function string() {
+            str = "Tôi yêu ngôn ngữ lập trình Javascript";
+            alert(str.split('a').length - 1);
+            alert(str.split(""));
+            alert(str.split("").length - 1);
+            alert(str.replace(/Javascript/i,"Typescript"));
+        }
+    </script>
+</body>
+
+</html>

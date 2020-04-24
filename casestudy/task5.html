@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrListCustomer = [];
+        function displayMainMenu() {
+            let chose = parseInt(prompt("1.Add new Customer." + "\n2.Display Information Customer" + "\n3.Edit Information Customer" + "\n4.Delete Customer" + "\n5.Exit"));
+            switch (chose) {
+                case 1: {
+                    addNewCustomer();
+                    break;
+                }
+                case 2: {
+                    break;
+                }
+                case 3: {
+                    break;
+                }
+                case 4: {
+                    break;
+                }
+                case 5: {
+                    break;
+                }
+                default: {
+                    alert("Failed");
+                }
+            }
+        }
+        function addNewCustomer() {
+            let cusInfo=[];
+            let name = prompt("input name:");
+            let cmnd = prompt("input cmnd");
+            let birthday = prompt("input birthday");
+            let email = prompt("input email");
+            let address = prompt("input address");
+            let typeSevice = prompt("input typesevice");
+            let typeRoom = prompt("input typeRoom");
+            let typeCustomer = prompt("input typeCustomer");
+            let quantityIncluded = prompt("input quantityIncluded: ");
+            let discount = prompt("input discount: ");
+            let renday = prompt("input renday: ");
+             
+            cusInfo.push(name);
+            cusInfo.push(cmnd);
+            cusInfo.push(birthday);
+            cusInfo.push(email);
+            cusInfo.push(address);
+            cusInfo.push(typeSevice);
+            cusInfo.push(typeRoom);
+            cusInfo.push(typeCustomer);
+            cusInfo.push(quantityIncluded);
+            cusInfo.push(discount);
+            cusInfo.push(renday);
+
+            arrListCustomer.push(cusInfo);
+            alert("bạn đã thêm thành công! ");
+            displayMainMenu();
+            
+        }
+        displayMainMenu();
+    </script>
+</body>
+
+</html>
