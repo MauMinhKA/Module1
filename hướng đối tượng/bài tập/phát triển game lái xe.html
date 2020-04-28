@@ -23,8 +23,8 @@
                 this.down=down;
             }
             displayCar() {
-                return '<img width="' + 50 + '"' +
-                    ' height="' + 50 + '"' +
+                return '<img width="' + 100 + '"' +
+                    ' height="' + 100 + '"' +
                     ' src="' + this.srcImage + '"' +
                     ' style="top: ' + this.top + 'px; left:' + this.left +'px; right:'+this.right+ 'px; down:' + this.down +'px;position:absolute;" />';
             }
@@ -35,10 +35,10 @@
                 this.left -= this.speed;
             }
             moveRight(){
-                this.right+=this.speed;
+                this.left+=this.speed;
             }
             moveDown(){
-                this.down+=this.speed;
+                this.top+=this.speed;
             }
 
         }
