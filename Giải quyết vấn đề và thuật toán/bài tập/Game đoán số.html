@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Game đoán số</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+
+    <script>
+        function nhiphnan(arr, x) {
+            let start = 0, end = (arr.length - 1);
+            while (start <= end) {
+                let mid = Math.floor((start + end) / 2);
+                if (arr[mid] === x) return true;
+                else if (arr[mid] < x)
+                    start = mid + 1;
+                else
+                    end = mid - 1;
+            }
+            return false;
+        }
+
+        function tuyentinh(arr, nums) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === nums) {
+                    return true;
+                }
+
+            }
+            return false
+        }
+        let arr = [1, 3, 5, 15, 20, 11, 60, 23, 7, 8, 9];
+        let x = 11;
+        let y =12;
+        if (nhiphnan(arr, x)) {
+            console.log("Element found");
+        } else {
+            console.log("Element not found");
+        }
+        if (tuyentinh(arr, y)) {
+            console.log("Element found");
+        } else {
+            console.log("Element not found");
+        }
+
+    </script>
+</body>
+
+</html>

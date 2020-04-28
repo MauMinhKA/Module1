@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sử dụng thuật toán tìm kiếm Mục tiêu</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+
+<body>
+    <script>
+        var arr = [086123456, 096123456,090123456, 088123456, 091123456, 056123456, 063123456]
+
+        function checkmang(arr, check) {
+            for (let i = 0; i < arr.length; i++) {
+                if (check.test(arr[i])) {
+                    console.log(arr[i] + " la so vietttel");
+
+                }
+            }
+            return false
+        }
+        check = /^[0][86]|[96]\d{6}$/
+        checkmang(arr, check);
+
+
+
+    </script>
+</body>
+
+</html>

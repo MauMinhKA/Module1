@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <script>
+        var c = 0;
+        var count = 0;
+        var nums = [];
+        var number = parseInt(prompt("in put number: "))
+        for (var i = 0; i < 100; ++i) {
+            nums[i] = Math.floor(Math.random() * 101);
+        }
+        function check(arr, num) {
+            for (let i = 0; i < 100; i++) {
+                if (num === arr[i]) {
+                    count++
+                }
+            }
+        }
+        function show() {
+            for (let i = 0; i < 100; i++) {
+                document.write(nums[i] + "&nbsp&nbsp&nbsp&nbsp");
+                c++;
+                if (c > 9) {
+                    document.write("<br><br>");
+                    c = 0;
+                }
+            }
+        }
+        check(nums, number)
+        show();
+        document.write("<br><br>" + "số " + number + " xuất hiện " + count + " lần")
+
+
+
+
+    </script>
+</body>
+
+</html>

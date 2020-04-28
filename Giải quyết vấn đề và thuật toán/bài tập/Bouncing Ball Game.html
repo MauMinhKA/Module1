@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML5 2D Bouncing Ball Game Demo</title>
+	</head>
+<body>
+	<canvas width="400" height="300" id="mainCanvas" >
+	</canvas>
+	<p><input type="Button" VALUE=" start " onClick="doTimer()"></p>
+	<p><input type="Button" VALUE=" stop " onclick="stopTimer()"></p>
+	
+	<script>
+
+		(function () {
+
+			LEFT	= 37;
+			UP		= 38;
+			RIGHT	= 39;
+			DOWN	= 40;
+			
+			canvas = document.getElementById('mainCanvas');
+			ctx = canvas.getContext("2d");
+			document.body.addEventListener("keydown", handleKeys, true);
+			
+			WIDTH	= canvas.width;
+			HEIGHT	= canvas.height;
+			
+			ctx.fillStyle="black";
+			ctx.fillRect( 0, 0, WIDTH, HEIGHT);
+			
+			MAX_VELOCITY = 4;
+			creationBoxLength = 50;
+			
+			centerX = WIDTH / 2;
+			centerY = HEIGHT / 2;
+			RADIUS = 3;
+			PLATE_W = 100;
+			PLATE_H = 8;
+			
+			var initials = initGame();
+			BALL = initials.ball;
+			PLATE = initials.plate;
+		})();
+		function handleKeys(e) {
+			var delta = 10;
+			switch(e.keyCode) {	
+				case LEFT:
+					if(PLATE.x - delta >= 0)
+						PLATE.x -= delta;
+					break;
+				case RIGHT:
+					if(PLATE.x + PLATE.w + delta <= WIDTH)
+						PLATE.x += delta;
+					break;				
+				default:
+			}
+		}
+		function initGame() {
+			return { "ball": generateBall(RADIUS), "plate": generatePlate(PLATE_W, PLATE_H) };
+		}
+		function animateGame() {
+			clearScreen();
+			gameHandler();
+		}
+		function gameHandler() {
+
+			BALL.x += BALL.v_x
+			BALL.y += BALL.v_y
+			if( (BALL.v_x < 0) && (BALL.x - BALL.r < 0) || (BALL.v_x > 0) && (BALL.x + BALL.r > WIDTH) ) {
+				BALL.v_x = -BALL.v_x;
+			}			
+			if( (BALL.v_y < 0) && (BALL.y - BALL.r < 0) || (BALL.v_y > 0) && (BALL.y + BALL.r > HEIGHT) ) {
+				BALL.v_y = -BALL.v_y;
+			}
+			if( (BALL.x >= PLATE.x) && (BALL.x <= PLATE.x + PLATE.w) ) {
+				if(
+					( ( (BALL.y + BALL.r >= PLATE.y) && (BALL.y + BALL.r < PLATE.y + PLATE.h) ) && ( BALL.v_y > 0 ) )
+					||
+					( (BALL.y - BALL.r <= PLATE.y + PLATE.h) && ( (BALL.y - BALL.r > PLATE.y) ) && ( BALL.v_y < 0 ) )
+				) {
+					BALL.v_y = -BALL.v_y;
+				}
+			}	
+			drawBall();
+			drawPlate();
+		}
+		function drawBall() {
+			ctx.beginPath();
+			ctx.arc(BALL.x, BALL.y, BALL.r, 0, 2 * Math.PI, false);
+			ctx.fillStyle = 'white';
+			ctx.fill();
+		}
+		function drawPlate() {
+			ctx.beginPath();
+			ctx.fillStyle = 'yellow';
+			ctx.fillRect( PLATE.x, PLATE.y, PLATE.w, PLATE.h );
+		}
+		function clearScreen() {
+			ctx.clearRect( 0, 0, WIDTH, HEIGHT );
+			ctx.beginPath();
+			ctx.fillStyle="black";
+			ctx.fillRect(  0, 0, WIDTH, HEIGHT );
+		}
+		function doTimer() {
+			timerID = setInterval( "animateGame()", 20 );
+		}
+		function stopTimer() {
+			clearInterval( timerID );
+		}
+		function generateBall(radius) {
+			var x = getPositiveRandom(WIDTH  - radius);
+			var y = getPositiveRandom(HEIGHT - radius);
+			var v_x = getPositiveRandom(MAX_VELOCITY);
+			var v_y = getPositiveRandom(MAX_VELOCITY);
+			
+			var ball = { "r": radius, "x": x, "y": y, "v_x": v_x, "v_y": v_y };
+			
+			return ball;
+		}
+		function generatePlate(w, h) {
+			return { "x": WIDTH/2 - w/2, "y": HEIGHT-HEIGHT/4, "w": w, "h": h };
+		}
+		function getRandom(limit) {
+			var sign = Math.ceil( Math.random() * 150 );
+			if(sign < 50)
+				sign = -1;
+			else
+				sign = 1;
+			
+			var num = sign * Math.ceil( (Math.random() * limit-1) + 1);
+			
+			return num;
+		}
+		function getPositiveRandom(limit) {		
+			var num = Math.ceil( (Math.random() * limit-1) + 1);
+			return num;
+		}
+	</script>
+</body>
+</html>
