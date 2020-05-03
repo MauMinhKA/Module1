@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript" src="Employee.js"></script>
+</head>
+
+<body>
+    <script>
+        let lisemployee = [];
+        function displayMainMenu() {
+            let choose = parseInt(prompt("1.Add new Employee." + "\n2.Display Information Employee." +
+                "\n3.Salary of Employee." + "\n4.Exit."));
+            switch (choose) {
+                case 1: {
+                    addnewEmployee();
+                    break;
+                }
+                case 2: {
+                    displayinfomation();
+                    break;
+                }
+                case 3: {
+                    displaySalary();
+                    break;
+                }
+                default: {
+                    alert("loi")
+                }
+            }
+        }
+        function displaySalary() {
+            let result = "";
+            for (let i = 0; i < lisemployee.length; i++) {
+                result += i + ". Name: " + lisemployee[i].getName() + "\n";
+            } 
+            let chooseDisplay = parseInt(prompt(result));
+            alert("Salary Of "+lisemployee[chooseDisplay].getName()+" is: "+lisemployee[chooseDisplay].getSalary());
+            displayMainMenu();
+        }
+        function displayinfomation() {
+            let result = "";
+            for (let i = 0; i < lisemployee.length; i++) {
+                result += i + ". Name: " + lisemployee[i].getName() + "\n";
+            }
+            let chooseDisplay = parseInt(prompt(result));
+            alert("Tên: " + lisemployee[chooseDisplay].getName() + "\n" +
+                "Ngày sinh: " + lisemployee[chooseDisplay].getBirthday() + "\n" +
+                "Số điện thoại: " + lisemployee[chooseDisplay].getPhone() + "\n" +
+                "email: " + lisemployee[chooseDisplay].getEmail() + "\n" +
+                "CMND: " + lisemployee[chooseDisplay].getName() + "\n" +
+                "Vị trí: " + lisemployee[chooseDisplay].getLocation() + "\n" +
+                "Trình độ: " + lisemployee[chooseDisplay].getLevel());
+                displayMainMenu();
+        }
+        function addnewEmployee() {
+            let employee = new Employee();
+            employee.setName(prompt("Enter Name: "));
+            employee.setCmnd(prompt("Enter Cmnd : "));
+            employee.setPhone(prompt("Enter phone: "));
+            employee.setbirthday(prompt("Enter birthday: "));
+            employee.setEmail(prompt("Enter email: "));
+            employee.setlevel(prompt("Enter level: "));
+            employee.setLocation(prompt("Enter location: "));
+            lisemployee.push(employee);
+            alert("add employee success")
+            displayMainMenu();
+        }
+        displayMainMenu();
+    </script>
+</body>
+
+</html>
